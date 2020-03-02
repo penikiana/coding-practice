@@ -1,5 +1,5 @@
 #include <iostream>
-
+/*
 using namespace std;
 
 class DynamicArray
@@ -70,3 +70,4 @@ int main()
 	n.at(5);
 	
 }
+*/
