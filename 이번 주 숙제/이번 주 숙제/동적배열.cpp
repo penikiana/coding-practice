@@ -43,13 +43,13 @@ public:
 
 	void setData(int i, int data) 
 	{
-		cout <<"여기 있나요 있는거 맞죠?" << endl;
+		cout << "data에 저장된 i의 주소값은 이걸거야 :";
 		arr[i] = data;
 		cout << &data << endl;
 	}
 	int at(int i) const
 	{
-		cout << "i의주소값은 이걸거야 :"<< &i << endl;
+		cout <<i<<"의주소값은 이걸거야 :"<< &i << endl;
 		return i;
 	}
 	int& operator[](int i) 
@@ -57,16 +57,14 @@ public:
 
 		return i;
 	}
-	
-
 };
 
 int main()
 {
-	DynamicArray n(11);
+	DynamicArray n(5);
 	n.resize(12);
 
-	n.setData(10, 0);
+	n.setData(10, 6);
 	n.at(5);
 	
 }

@@ -1,17 +1,17 @@
 #include <iostream>
-
+/*
 using namespace std;
 
 class stack
 {
 private:
-	int size[7];
+	int size[8];
 	int empty;
 	int indicator = 0;
 public:
 	stack()
 	{
-
+		
 	}
 	~stack()
 	{
@@ -31,6 +31,7 @@ public:
 		}
 	
 	}
+
 	void top()
 	{
 		if (indicator > 0)
@@ -40,9 +41,10 @@ public:
 		else
 			cout << "스택이 비어있습니다." << endl;
 	}
+
 	void push(int n)
 	{
-		if (indicator < 7)
+		if (indicator < 8)
 		{
 			size[indicator] = n;
 			cout << "입력된 값:" << size[indicator] << endl;
@@ -71,16 +73,17 @@ int main()
 	init.pop();
 	init.pop();
 	init.pop();
+	init.top();
+	init.pop();
 	init.pop();
 	init.pop();
 	init.pop();
 	init.pop();
 	init.top();
-	
-
 }
-
+*/
 	
+
 
 	
 	
