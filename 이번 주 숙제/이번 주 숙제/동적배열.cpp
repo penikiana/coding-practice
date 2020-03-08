@@ -1,5 +1,5 @@
 #include <iostream>
-/*
+
 using namespace std;
 
 class DynamicArray
@@ -7,9 +7,11 @@ class DynamicArray
 private:
 	int size=0;
 	int* arr;
+	int* copiedarray;
 public:
 	DynamicArray(int size=10)
 	{
+		this->size = size;
 		cout << "너는 되지 ?" << endl;
 		arr = new int[size];
 		for (int i = 0; i < size; i++)
@@ -20,25 +22,21 @@ public:
 	}
 	~DynamicArray()
 	{
-		cout << "소멸자 호출은 되긴함 ?" << endl;
+		delete[] arr;
 	}
 	
 	void resize(int n)
 	{
-		
-		int* copiedarray = new int[n];
+		int* copiedarray = new sizeof(int);
 	
-		memcpy(copiedarray, arr, sizeof(n));
-
-		cout << "되는거 맞냐..." << endl;
 
 		for (int i = 0; i < n; i++)
 		{
-			cout << &copiedarray[i] << endl;
+			arr[i] = copiedarray[i];
 		}
 
-		delete[] copiedarray;
-		copiedarray = nullptr;
+		delete[] arr;
+		arr = copiedarray;
 	}
 
 	void setData(int i, int data) 
@@ -49,7 +47,7 @@ public:
 	}
 	int at(int i) const
 	{
-		cout <<i<<"의주소값은 이걸거야 :"<< &i << endl;
+		cout << i << endl;
 		return i;
 	}
 	int& operator[](int i) 
@@ -68,4 +66,4 @@ int main()
 	n.at(5);
 	
 }
-*/
+

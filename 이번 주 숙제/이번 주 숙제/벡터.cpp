@@ -1,5 +1,5 @@
 #include <iostream>
-
+/*
 using namespace std;
 
 class vector
@@ -54,18 +54,23 @@ public:
 
 	int getsize()
 	{
-
+		cout << "현재 벡터의 크기:" << indicator << endl;
+		return 0;
 	}
 	int getcapacity()
 	{
-
+		
 	}
 
 	void push_front(int data)
 	{
 		arr[top] = data;
 		cout << "벡터의 머리에 " << data << "를 추가합니다." << endl;
-		
+		indicator++;
+		if (indicator > size)
+		{
+			reserve();
+		}
 	}
 	void push_back(int data)
 	{
@@ -107,13 +112,13 @@ public:
 
 	void reserve()
 	{
-
+		
 	}
 };
 
 int main()
 {
-	vector go;
+	vector go(12);
 	go.at(2);
 
 	go.front();
@@ -121,19 +126,20 @@ int main()
 	go.push_front(5);
 	go.push_front(6);
 	go.push_front(7);
-	go.remove(9);
+	go.remove(7);
 	go.front();
 	go.back();
 
 	go.push_front(8);
 	go.push_back(6);
 
+	go.getsize();
+
+	go.empty();
 	go.clear();
+	go.empty();
 
 	go.front();
 	go.back();
-
-
-
-
 }
+*/
